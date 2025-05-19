@@ -43,3 +43,68 @@ COPY . /app
 WORKDIR /app
 RUN pip install -r requirements.txt
 CMD ["python", "app.py"]
+```
+
+# 🐳 Docker Command Cheat Sheet
+
+## 📌 Basic Commands
+| Command | Description |
+|---------|-------------|
+| `docker --version` | Check Docker version |
+| `docker info` | Show system-wide information |
+| `docker --help` | List all available commands |
+
+## 🚀 Container Management
+| Command | Description |
+|---------|-------------|
+| `docker run -d --name my_container nginx` | Run a container in detached mode |
+| `docker ps` | List running containers |
+| `docker ps -a` | List all containers (including stopped) |
+| `docker stop my_container` | Stop a container |
+| `docker start my_container` | Start a stopped container |
+| `docker rm my_container` | Remove a container |
+
+## 📦 Image Management
+| Command | Description |
+|---------|-------------|
+| `docker images` | List downloaded images |
+| `docker pull ubuntu` | Pull image from Docker Hub |
+| `docker rmi nginx` | Remove an image |
+
+## 🛠️ Build and Push
+| Command | Description |
+|---------|-------------|
+| `docker build -t my_image .` | Build image from Dockerfile |
+| `docker tag my_image myrepo/my_image:v1` | Tag an image |
+| `docker push myrepo/my_image:v1` | Push image to registry |
+
+## 🔗 Networking
+| Command | Description |
+|---------|-------------|
+| `docker network ls` | List networks |
+| `docker network create my_network` | Create a network |
+| `docker network connect my_network my_container` | Connect container to network |
+
+## 💾 Volume Management
+| Command | Description |
+|---------|-------------|
+| `docker volume ls` | List volumes |
+| `docker volume create my_volume` | Create a volume |
+| `docker run -v my_volume:/data nginx` | Mount volume to container |
+
+## 🏗️ Docker Compose
+| Command | Description |
+|---------|-------------|
+| `docker-compose up -d` | Start services |
+| `docker-compose down` | Stop services |
+| `docker-compose logs` | View service logs |
+
+## 🧹 Cleanup
+| Command | Description |
+|---------|-------------|
+| `docker container prune` | Remove stopped containers |
+| `docker system prune -a` | Remove all unused objects |
+
+---
+
+🚀 **Happy Dockering!**
