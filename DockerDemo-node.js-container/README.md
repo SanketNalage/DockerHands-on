@@ -18,9 +18,13 @@ A simple Node.js application containerized with Docker that demonstrates basic D
 
 ## Project Structure
 ├── Dockerfile
+<br>
 ├── main.js
+<br>
 ├── package.json
+<br>
 ├── package-lock.json
+<br>
 └── README.md
 
 ### 1. Build the Docker Image
