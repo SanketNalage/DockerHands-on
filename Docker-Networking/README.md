@@ -73,13 +73,12 @@ docker network inspect bridge
 ```
 
 ## 3.none Network
-The container gets a network stack but no interfaces
-Like a computer with no network cables plugged in
-Useful for:
-Batch jobs that need no network
-Security-sensitive processes
-Testing network-free scenarios
-
+- The container gets a network stack but no interfaces
+- Like a computer with no network cables plugged in
+- Useful for:
+--> Batch jobs that need no network
+--> Security-sensitive processes
+--> Testing network-free scenarios
 
 ## 🚫 Cannot Be Removed
 - All three are default Docker networks that cannot be deleted:
