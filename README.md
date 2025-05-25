@@ -99,6 +99,36 @@ CMD ["python", "app.py"]
 | `docker-compose down` | Stop services |
 | `docker-compose logs` | View service logs |
 
+### 📌 Variable Commands
+| Command | Description |
+|---------|-------------|
+| `docker exec focused_yalow printenv APP_COLOR` | To checck the varibale inside the app |
+| `docker exec focused_yalow env ` | To see ALL environment variables: |
+
+### Docker Container Deployment Guide
+
+### 🐳 Running the Blue App Container
+
+### Basic Deployment Command
+```bash
+docker run -d \
+  --name blue-app \
+  -e APP_COLOR=blue \
+  -p 38282:8080 \
+  kodekloud/simple-webapp
+```
+## 🛠️ Command Breakdown
+
+| Parameter               | Description                                                                 |
+|-------------------------|-----------------------------------------------------------------------------|
+| `docker run`            | Creates and starts a new container                                         |
+| `-d`                    | Runs container in detached mode (background)                               |
+| `--name blue-app`       | Assigns the name "blue-app" to the container                               |
+| `-e APP_COLOR=blue`     | Sets environment variable `APP_COLOR` to value "blue"                      |
+| `-p 38282:8080`         | Maps host port 38282 to container port 8080                                |
+| `kodekloud/simple-webapp` | Docker image used for the container (pulls from Docker Hub if not present) |
+
+
 ### 🧹 Cleanup
 | Command | Description |
 |---------|-------------|
